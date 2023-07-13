@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+img {
+    width:100px;
+}
+
+@media screen and (min-width:400px) {
+    img {
+        width:500px;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    color: red;
+}
+
+h3 a {
+    color: green;
+}
+
+a {
+    color: violet;
+}
+
+div.inception div {
+    color: blue;
+}
+
+div.inception > div {
+    color: orange;
+}
+
+
+strong {
+    font-size: 4rem;
+}
+
+h1 {
+    background-color:#6667AB;
+    color: white;
+    text-align: center; /* Alinear texto en el centro */
+}
+
+h2 {
+    font-size: 1;
+}
+
+label, input, textarea {
+    display: block;
+    width:100%;
+}
+
+textarea {
+    height:5em;
+}
+
+input, textarea {
+     margin-bottom:1em;
+     font-family: sans-serif;
+     padding: 5px;
+}
+
+button {
+    background-color: #6667AB;
+    color: #FFFFFF;
+    border: 1px solid #6667AB;
+    width:100%;
+    padding:0.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+div {
+    border: 1px solid #6667AB;
+    margin-bottom:1em;
+    padding:10px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom:4px;
+}
+
+p.dueDate {
+    font-size:0.8em;
+    color: darkgray;
+    margin-bottom:1em;
+}
+
+a {
+    font-size: 0.8em;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Todolist</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+        <h1>TODOLIST</h1>
+
+        <!-- Apartado nueva tarea -->
+        
+        <h2>Nueva tarea</h2>
+
+        <form action="http://127.0.0.1:5500/">
+            <label for="task">Escribe la descripción de la tarea</label>
+            <textarea id="task" name="task"></textarea>
+
+            <label for="dueDate">Fecha límite</label>
+            <input id="dueDate" name="dueDate" type="date" />
+
+            <button>INSERTAR</button>
+        </form>
+
+        <!-- Listado de tareas -->
+
+        <h2>Tareas</h2>
+
+        <div>
+            <p>Preparar la clase de Nuclio Minors Full Stack Developer</p>
+            <p class="dueDate">Fecha límite: 25JUN</p>
+            <p><a href="">ELIMINAR</a></p>
+        </div>
+
+        <div>
+            <p>Devolver libros a la biblioteca y recoger nuevos libros sobre ciencia ficción</p>
+            <p class="dueDate">Fecha límite: 25JUN</p>
+            <p><a href="">ELIMINAR</a></p>
+        </div>
+
+        <div>
+            <p>Preparar las maletas y contratar el seguro para el viaje a Marte</p>
+            <p class="dueDate">Fecha límite: 25JUN</p>
+            <p><a href="">ELIMINAR</a></p>
+        </div>
+
+    </body>
+</html>

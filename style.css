@@ -75,7 +75,7 @@ button {
     font-size: 1.2em;
 }
 
-div {
+#tasks div {
     border: 1px solid #6667AB;
     margin-bottom:1em;
     padding:10px;

@@ -9,7 +9,7 @@
     </head>
     <body>
 
-        <h1>TODOLIST</h1>
+        <h1 id="h1Text">TODOLIST</h1>
 
         <!-- Apartado nueva tarea -->
         
@@ -22,30 +22,72 @@
             <label for="dueDate">Fecha límite</label>
             <input id="dueDate" name="dueDate" type="date" />
 
-            <button>INSERTAR</button>
+            <button id="formButton">INSERTAR</button>
         </form>
 
         <!-- Listado de tareas -->
 
         <h2>Tareas</h2>
 
-        <div>
-            <p>Preparar la clase de Nuclio Minors Full Stack Developer</p>
-            <p class="dueDate">Fecha límite: 25JUN</p>
-            <p><a href="">ELIMINAR</a></p>
+        <div id="tasks">
+            
         </div>
 
-        <div>
-            <p>Devolver libros a la biblioteca y recoger nuevos libros sobre ciencia ficción</p>
-            <p class="dueDate">Fecha límite: 25JUN</p>
-            <p><a href="">ELIMINAR</a></p>
-        </div>
+        <script type="text/javascript">
+            console.log("hola, aquí está mi javascript")
 
-        <div>
-            <p>Preparar las maletas y contratar el seguro para el viaje a Marte</p>
-            <p class="dueDate">Fecha límite: 25JUN</p>
-            <p><a href="">ELIMINAR</a></p>
-        </div>
+            tasks = [
+                {
+                  description: "Preparar la clase de Nuclio Minors Full Stack Developer",
+                  dueDate: "07/25/2023",
+                  done: false
+                },
+                {
+                  description: "Devolver libros a la biblioteca y recoger nuevos libros sobre ciencia ficción",
+                  dueDate: "08/12/2023",
+                  done: false
+                },
+                {
+                  description: "Preparar las maletas y contratar el seguro para el viaje a Marte",
+                  dueDate: "08/18/2023",
+                  done: false
+                },
+            ]
+
+            const formButton = document.getElementById("formButton")
+            formButton.addEventListener("click", () => {
+                confirm("La tarea se ha insertado con éxito")
+            })
+
+            const h1Text = document.getElementById("h1Text")
+            h1Text.addEventListener("mouseenter", (e)=>{
+                e.target.style.color = "red"
+                e.target.textContent = "warning"
+            })
+            h1Text.addEventListener("mouseout", (e)=>{
+                e.target.style.color = "white"
+                e.target.textContent = "safe"
+            })
+
+
+            for (task of tasks) {
+                const taskHTML = 
+                    "<div>"
+                    +"<p>"+task.description+"</p>"
+                    +"<p class='dueDate'>Fecha límite: "
+                        +new Date(task.dueDate)
+                        +" Faltan "
+                        +Math.round((new Date(task.dueDate) - new Date())/1000/60/60/24)
+                        +" días</p>"
+                    +"<p><a href=''>ELIMINAR</a></p>"
+                    +"</div>"
+
+                
+            }
+
+            
+
+        </script>
 
     </body>
 </html>
